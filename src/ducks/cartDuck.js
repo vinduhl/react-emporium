@@ -17,7 +17,7 @@ export default function reducer(state = initialState, action = {}) {
       };
     case REMOVE_PRODUCT:
       return {
-        productsInCart: state.productsInCart.filter( product => product._id !=== action.product._id )
+        productsInCart: state.productsInCart.filter( product => product._id !== action.product._id )
         , runningTotal: state.runningTotal - action.product.price
       };
     case CHECKOUT:

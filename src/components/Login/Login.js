@@ -27,6 +27,8 @@ class Login extends React.Component {
       username: this.state.username
       , email: this.state.email
     }));
+
+    browserHistory.push( "/shop" );
   }
 
   render() {

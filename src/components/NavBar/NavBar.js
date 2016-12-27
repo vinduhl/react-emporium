@@ -11,15 +11,15 @@ class NavBar extends React.Component {
       <nav>
         <h2>React Emporium</h2>
         {
-          if(this.props.user.loggedIn) {
+          this.props.user.loggedIn ?
             <div className="nav-link">
               <Link to="/">{ this.props.cart.productsInCart.length } items in cart - ${ Math.floor( this.props.cart.runningTotal ) }</Link>
             </div>
-          } else {
+          :
             <div className="nav-link">
                 <Link to="/login">Login</Link>
             </div>
-          }
+
         }
       </nav>
     );
